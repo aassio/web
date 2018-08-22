@@ -13,6 +13,7 @@ default: &default
 development:
   <<: *default
   database: aassio_dev
+  username: noff
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,6 +21,7 @@ development:
 test:
   <<: *default
   database: aassio_test
+  username: noff
 
 production:
   <<: *default
