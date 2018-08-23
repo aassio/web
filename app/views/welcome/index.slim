@@ -39,18 +39,26 @@ hr.my-4
 
 hr.my-4
 
-.row.my-5
+.row.mb-3
   .col
-    .card
-      .card-body
-        p.card-text Featured on block
+    h5.text-center Featured on
 
+.row
+  .col.d-flex.justify-content-between
+    = image_tag 'https://via.placeholder.com/200x100'
+    = image_tag 'https://via.placeholder.com/200x100'
+    = image_tag 'https://via.placeholder.com/200x100'
+    = image_tag 'https://via.placeholder.com/200x100'
+
+hr.my-4
 
 .row.my-5
   .col
     .card
       .card-body
         p.card-text Details section
+
+
 
 
 // Video
@@ -73,21 +81,27 @@ javascript:
     }).resize();
 
 
+hr.my-4
 
-.row.my-5
+.row
   .col
     p.text-center = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
 
+hr.my-4
 
-.row.my-5
+.row.mb-3
   .col
-    .card
-      .card-body
-        p.card-text How it works
+    h5 How it works
+.row
+  .col
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-.row.mt-5
-  .col
-    h3.text-center Our products
+hr.my-4
+
+.row
+  .col.text-center
+    h3 Our products
+    p.lead Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 .row
   .col.text-center
     div = link_to '#' do
@@ -106,9 +120,229 @@ javascript:
     div A platform where you can ...
 
 
+hr.my-4
+
+.row
+  .col
+    h5.text-center Token sale details
+.row
+  .col
+    table.table
+      tr
+        th ICO start date
+        td
+      tr
+        th ICO end date
+        td
+      tr
+        th Total tokens in STO
+        td
+      tr
+        th Token sale price
+        td
+      tr
+        th Min purchase limit
+        td
+      tr
+        th Token name
+        td
+  .col
+    table.table
+      tr
+        th Hard cap
+        td
+      tr
+        th Total token supply
+        td
+      tr
+        th Blockchain platform
+        td
+      tr
+        th Token type
+        td
+      tr
+        th Token standard
+        td
+      tr
+        th Token symbol
+        td
+
+hr.my-4
 
 
+.row
+  .col
+    h5.text-center Token allocation and use of proceeds
+.row
+  .col
+    p charts here
 
 
+hr.my-4
+
+
+.row
+  .col
+    h5.text-center White Paper
+.row
+  .col
+    p White Paper description, image and download button here
+
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Roadmap
+.row
+  .col
+    p Roadmap here
+
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Team
+.row
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Advisors
+.row
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  .col
+    div = image_tag 'https://via.placeholder.com/200x200'
+    div Name
+    div Position
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center FAQ
+.row
+  .col
+    p Faq here
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Subscribe for updates
+.row
+  .col
+    p Form here
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Join our community
+.row
+  .col
+    p Icons of socials here
+
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center Last tweets
+.row
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
+
+hr.my-4
+
+.row
+  .col
+    h5.text-center New publications
+.row
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
+  .col
+    p Lorem Ipsum is simply dummy text
 
 
