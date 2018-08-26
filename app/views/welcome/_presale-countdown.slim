@@ -1,0 +1,22 @@
+hr.my-4
+
+.row.mb-3
+  .col
+    h5.text-center Token presale will start in
+
+.row.mb-3
+  .col.d-flex.justify-content-center
+    .countdown
+    javascript:
+        $(document).ready(function(){
+            var clock = $('.countdown').FlipClock( (new Date(2018, 12, 01)).getTime() / 1000 - (new Date()).getTime() / 1000,  {
+                countdown: true,
+                clockFace: 'DailyCounter'
+
+            });
+        });
+
+.row
+  .col.text-center
+    = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
+

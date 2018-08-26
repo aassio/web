@@ -5,344 +5,36 @@
         .row
           .col
             h1.display-4 aassio
-            p.lead Here will be a paragraph of text with clear description of what `aassio` is. Clear and simple
+            p.lead Platform based on blockchain technology where people can get easy access to invest, hold, buy or sell real estate with other crypto currencies.
             hr.my-4
-            p Sign up and get access to presale activity.
-            p.lead = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
+            / p Sign up and get access to presale activity.
+            / p.lead = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
+            p.lead = link_to 'Download Whitepaper', 'https://docs.wixstatic.com/ugd/f3ddb9_2567159825094b4d9acf0331ec0b88c1.pdf', class: 'btn btn-primary btn-lg', target: '_blank'
           .col
-            = image_tag 'https://via.placeholder.com/400x300'
+            img src='holder.js/100px200?theme=sky&text=Descriptive image'
 
-hr.my-4
-
-.row.mb-3
-  .col
-    h5.text-center Token presale will start in
-
-.row.mb-3
-  .col.d-flex.justify-content-center
-    .countdown
-    javascript:
-      $(document).ready(function(){
-          var clock = $('.countdown').FlipClock( (new Date(2018, 12, 01)).getTime() / 1000 - (new Date()).getTime() / 1000,  {
-              countdown: true,
-              clockFace: 'DailyCounter'
-
-          });
-      });
-
-.row
-  .col.text-center
-    = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
+/ = render 'presale-countdown'
+/ = render 'featured'
+= render 'details'
+= render 'socials'
+/ = render 'video'
+/ = render 'signup'
+/ = render 'how-it-works'
+/ = render 'products'
+/ = render 'token'
+/ = render 'allocation'
+= render 'whitepaper'
+/ = render 'roadmap'
+= render 'team'
+/ = render 'advisors'
+= render 'faq'
+= render 'subscribe'
+= render 'tweets'
+= render 'publications'
 
 
 
 
-hr.my-4
 
-.row.mb-3
-  .col
-    h5.text-center Featured on
-
-.row
-  .col.d-flex.justify-content-between
-    = image_tag 'https://via.placeholder.com/200x100'
-    = image_tag 'https://via.placeholder.com/200x100'
-    = image_tag 'https://via.placeholder.com/200x100'
-    = image_tag 'https://via.placeholder.com/200x100'
-
-hr.my-4
-
-.row.my-5
-  .col
-    .card
-      .card-body
-        p.card-text Details section
-
-
-
-
-// Video
-.row.my-5
-  .col#video-container
-    iframe width="560" height="315" src="https://www.youtube.com/embed/3t_O1mPO50s?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"
-javascript:
-    var $allVideos = $("iframe[src^='https://www.youtube.com']"),
-        $fluidEl = $("#video-container");
-    $allVideos.each(function () {
-        $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-    });
-
-    $(window).resize(function () {
-        var newWidth = $fluidEl.width();
-        $allVideos.each(function () {
-            var $el = $(this);
-            $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-        });
-    }).resize();
-
-
-hr.my-4
-
-.row
-  .col
-    p.text-center = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
-
-hr.my-4
-
-.row.mb-3
-  .col
-    h5 How it works
-.row
-  .col
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-hr.my-4
-
-.row
-  .col.text-center
-    h3 Our products
-    p.lead Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-.row
-  .col.text-center
-    div = link_to '#' do
-      = image_tag 'https://via.placeholder.com/200x200'
-    div = link_to 'aassioX', '#'
-    div An exchange where you can ...
-  .col.text-center
-    div = link_to '#' do
-      = image_tag 'https://via.placeholder.com/200x200'
-    div = link_to 'aassioHome', '#'
-    div A marketplace where you can ...
-  .col.text-center
-    div = link_to '#' do
-      = image_tag 'https://via.placeholder.com/200x200'
-    div = link_to 'aassioLife', '#'
-    div A platform where you can ...
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Token sale details
-.row
-  .col
-    table.table
-      tr
-        th ICO start date
-        td
-      tr
-        th ICO end date
-        td
-      tr
-        th Total tokens in STO
-        td
-      tr
-        th Token sale price
-        td
-      tr
-        th Min purchase limit
-        td
-      tr
-        th Token name
-        td
-  .col
-    table.table
-      tr
-        th Hard cap
-        td
-      tr
-        th Total token supply
-        td
-      tr
-        th Blockchain platform
-        td
-      tr
-        th Token type
-        td
-      tr
-        th Token standard
-        td
-      tr
-        th Token symbol
-        td
-
-hr.my-4
-
-
-.row
-  .col
-    h5.text-center Token allocation and use of proceeds
-.row
-  .col
-    p charts here
-
-
-hr.my-4
-
-
-.row
-  .col
-    h5.text-center White Paper
-.row
-  .col
-    p White Paper description, image and download button here
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Roadmap
-.row
-  .col
-    p Roadmap here
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Team
-.row
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Advisors
-.row
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center FAQ
-.row
-  .col
-    p Faq here
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Subscribe for updates
-.row
-  .col
-    p Form here
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Join our community
-.row
-  .col
-    p Icons of socials here
-
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center Last tweets
-.row
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
-
-hr.my-4
-
-.row
-  .col
-    h5.text-center New publications
-.row
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
-  .col
-    p Lorem Ipsum is simply dummy text
 
 

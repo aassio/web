@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title aassio
+    title = content_for?(:title) ? yield(:title) : 'aassio | real estate tokenization | crypto exchange'
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
