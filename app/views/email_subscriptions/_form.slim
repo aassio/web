@@ -1,0 +1,4 @@
+= simple_form_for @email_subscription, wrapper: :inline_form, html: { class: "form-inline" }, wrapper_mappings: { boolean: :inline_boolean } do |f|
+  = f.input :email, input_html: { class: "mr-sm-2" }, placeholder: 'Email'
+  = f.input :name, input_html: { class: "mr-sm-2" }, placeholder: 'Name'
+  = f.submit 'Submit', class: "btn btn-primary mx-sm-2"

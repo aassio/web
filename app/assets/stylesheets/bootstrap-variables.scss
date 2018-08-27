@@ -158,8 +158,10 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+//$body-bg:                   $white !default;
+//$body-color:                $gray-900 !default;
+$body-bg:                   #31599F !default;
+$body-color:                $white !default;
 
 // Links
 //
@@ -298,7 +300,7 @@ $text-muted:                  $gray-600 !default;
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
 
-$hr-border-color:             rgba($black, .1) !default;
+$hr-border-color:             rgba($white, .5) !default;
 $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;

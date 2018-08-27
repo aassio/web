@@ -7,34 +7,33 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body.pt-5
-    nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+    nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
       = link_to 'AASSIO', root_path, class: 'navbar-brand'
       button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
         span class="navbar-toggler-icon"
       div class="collapse navbar-collapse" id="navbarSupportedContent"
         ul class="navbar-nav mr-auto"
-          li class="nav-item active" = link_to 'Public Sale', '#', class: 'nav-link'
-          li class="nav-item active" = link_to 'Team', '#', class: 'nav-link'
-          li class="nav-item active" = link_to 'White Paper', '#', class: 'nav-link'
-          li class="nav-item active" = link_to 'aassioX', '#', class: 'nav-link'
-          li class="nav-item active" = link_to 'aassioHome', '#', class: 'nav-link'
-          li class="nav-item active" = link_to 'aassioLife', '#', class: 'nav-link'
-        ul class="navbar-nav my-2 my-lg-0"
-          - if user_signed_in?
-            li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
-            li class="nav-item active" = link_to 'Account', '#', class: 'nav-link'
-            li class="nav-item active" = link_to 'Sign out', destroy_user_session, method: :delete, class: 'nav-link'
-          - else
-            li class="nav-item active" = link_to 'Sign up', new_user_registration_path, class: 'nav-link'
-            li class="nav-item active" = link_to 'Sign in', new_user_session_path, class: 'nav-link'
+          / li class="nav-item active" = link_to 'Public Sale', '#', class: 'nav-link'
+          / li class="nav-item active" = link_to 'Team', '#', class: 'nav-link'
+          li class="nav-item active" = link_to 'White Paper', 'https://docs.wixstatic.com/ugd/f3ddb9_2567159825094b4d9acf0331ec0b88c1.pdf', class: 'nav-link', target: '_blank'
+          / li class="nav-item active" = link_to 'aassioX', '#', class: 'nav-link'
+          / li class="nav-item active" = link_to 'aassioHome', '#', class: 'nav-link'
+          / li class="nav-item active" = link_to 'aassioLife', '#', class: 'nav-link'
+        / ul class="navbar-nav my-2 my-lg-0"
+        /   - if user_signed_in?
+        /     li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
+        /     li class="nav-item active" = link_to 'Account', '#', class: 'nav-link'
+        /     li class="nav-item active" = link_to 'Sign out', destroy_user_session, method: :delete, class: 'nav-link'
+        /   - else
+        /     li class="nav-item active" = link_to 'Sign up', new_user_registration_path, class: 'nav-link'
+        /     li class="nav-item active" = link_to 'Sign in', new1_user_session_path, class: 'nav-link'
 
-    .container.mt-5
-      = yield
-
+    = yield
 
 
     footer.my-5
       .container
         .row
           .col
-            p.text-center It's a footer
+            p.text-center
+              ' &copy; aassio.io, 2018

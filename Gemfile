@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'devise'
+gem 'activeadmin'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

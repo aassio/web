@@ -1,37 +1,35 @@
-.row
-  .col
-    .jumbotron
-      .container
-        .row
-          .col
-            h1.display-4 aassio
-            p.lead Platform based on blockchain technology where people can get easy access to invest, hold, buy or sell real estate with other crypto currencies.
-            hr.my-4
-            / p Sign up and get access to presale activity.
-            / p.lead = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg'
-            p.lead = link_to 'Download Whitepaper', 'https://docs.wixstatic.com/ugd/f3ddb9_2567159825094b4d9acf0331ec0b88c1.pdf', class: 'btn btn-primary btn-lg', target: '_blank'
-          .col
-            img src='holder.js/100px200?theme=sky&text=Descriptive image'
+.hero
+  .container.py-5.mb-5
+    .row
+      .col-md-6
+        img src='holder.js/100px200?theme=sky&text=Descriptive image'
+      .col-md-6
+        h1.display-4.font-weight-bold aassio
+        p.lead.font-weight-bold Platform based on blockchain technology where people can get easy access to invest, hold, buy or sell real estate with other crypto currencies.
+        hr.my-4
+        p.lead = link_to 'Download Whitepaper', 'https://docs.wixstatic.com/ugd/f3ddb9_2567159825094b4d9acf0331ec0b88c1.pdf', class: 'btn btn-primary btn-lg', target: '_blank'
 
-/ = render 'presale-countdown'
-/ = render 'featured'
-= render 'presale-access'
-= render 'details'
-= render 'socials'
-/ = render 'video'
-/ = render 'signup'
-/ = render 'how-it-works'
-/ = render 'products'
-/ = render 'token'
-/ = render 'allocation'
-= render 'whitepaper'
-/ = render 'roadmap'
-= render 'team'
-/ = render 'advisors'
-= render 'faq'
-= render 'subscribe'
-/ = render 'tweets'
-/ = render 'publications'
+.container
+
+  / = render 'presale-countdown'
+  / = render 'featured'
+  = render 'presale-access'
+  = render 'details'
+  = render 'socials'
+  / = render 'video'
+  / = render 'signup'
+  / = render 'how-it-works'
+  / = render 'products'
+  / = render 'token'
+  / = render 'allocation'
+  / = render 'whitepaper'
+  / = render 'roadmap'
+  = render 'team'
+  / = render 'advisors'
+  / = render 'faq'
+  = render 'subscribe'
+  / = render 'tweets'
+  / = render 'publications'
 
 
 
