@@ -8,7 +8,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body.pt-5
     nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
-      = link_to 'AASSIO', root_path, class: 'navbar-brand'
+      = link_to image_tag('logo.png', style: 'height: 30px'), root_path, class: 'navbar-brand'
       button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
         span class="navbar-toggler-icon"
       div class="collapse navbar-collapse" id="navbarSupportedContent"
@@ -16,6 +16,12 @@ html
           / li class="nav-item active" = link_to 'Public Sale', '#', class: 'nav-link'
           / li class="nav-item active" = link_to 'Team', '#', class: 'nav-link'
           li class="nav-item active" = link_to 'White Paper', 'https://docs.wixstatic.com/ugd/f3ddb9_2567159825094b4d9acf0331ec0b88c1.pdf', class: 'nav-link', target: '_blank'
+          li class="nav-item"
+            a href='#community' class='nav-link' Community
+          li class="nav-item"
+            a href='#team' class='nav-link' Team
+          li class="nav-item"
+            a href='#updates' class='nav-link' Updates
           / li class="nav-item active" = link_to 'aassioX', '#', class: 'nav-link'
           / li class="nav-item active" = link_to 'aassioHome', '#', class: 'nav-link'
           / li class="nav-item active" = link_to 'aassioLife', '#', class: 'nav-link'
