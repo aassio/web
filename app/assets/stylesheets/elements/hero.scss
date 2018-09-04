@@ -1,4 +1,10 @@
 .hero {
-  //background: asset_url('city.jpg') #aaa 0 0 no-repeat;
-  //color: $black;
+  background: asset_url('hero-bg-min.jpg') #1B3988 50% 100% repeat-x;
+  background-size: auto;
+  color: $white;
+}
+
+.lead__hero {
+  font-size: 32px;
+  font-weight: 300;
 }

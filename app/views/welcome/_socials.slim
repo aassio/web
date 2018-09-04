@@ -1,15 +1,18 @@
-
-a name='community'
-hr.my-5
-
-.row.mb-3
-  .col
-    h5.text-center Join our community
-.row.mb-3
-  .col.d-flex.justify-content-center
-    = link_to image_tag('socials/twitter.png'), 'https://twitter.com/aass_io', target: '_blank', class: 'mx-2 social-icon'
-    = link_to image_tag('socials/medium.png'), 'https://medium.com/@aassio', target: '_blank', class: 'mx-2 social-icon'
-    = link_to image_tag('socials/telegram.png'), 'https://medium.com/@aassio', target: '_blank', class: 'mx-2 social-icon'
-    = link_to image_tag('socials/facebook.png'), 'https://www.facebook.com/aassiorocks/', target: '_blank', class: 'mx-2 social-icon'
-    = link_to image_tag('socials/linkedin.png'), 'https://www.linkedin.com/company/aassio/', target: '_blank', class: 'mx-2 social-icon'
+.section.section__gray
+  .container
+    a name='community'
+    .row.pt-5
+      .col.text-center
+        div.mb-4 = retina_image_tag 'icons/community.png'
+        h3.mb-4
+          ' Join Our
+          div.text-primary Community
+        hr.short.mb-4
+    .row.pb-5
+      .col.d-flex.justify-content-center
+        = link_to retina_image_tag('socials/twitter.png'), 'https://twitter.com/aass_io', target: '_blank', class: 'mx-2 social-icon'
+        = link_to retina_image_tag('socials/medium.png'), 'https://medium.com/@aassio', target: '_blank', class: 'mx-2 social-icon'
+        = link_to retina_image_tag('socials/telegram.png'), 'https://medium.com/@aassio', target: '_blank', class: 'mx-2 social-icon'
+        = link_to retina_image_tag('socials/facebook.png'), 'https://www.facebook.com/aassiorocks/', target: '_blank', class: 'mx-2 social-icon'
+        = link_to retina_image_tag('socials/linkedin.png'), 'https://www.linkedin.com/company/aassio/', target: '_blank', class: 'mx-2 social-icon'
 

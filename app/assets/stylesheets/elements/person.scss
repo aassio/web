@@ -1,5 +1,18 @@
-.r-person-avatar {
-  border-radius: 50%;
-  border: 10px solid $white;
-  max-width: 180px;
+.person {
+  border-top: 3px solid $primary;
+  background: $white;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  height: 280px;
+  &-name {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  &-avatar img {
+    border-radius: 50%;
+    border: 2px solid #DBE8F5;
+    padding: 10px;
+    max-width: 150px;
+  }
 }

@@ -1,0 +1,12 @@
+.section {
+  &__gray {
+    background: $gray-100;
+  }
+  &__blue {
+    background: $primary;
+    color: $white;
+  }
+  &__dark_gradient {
+    background-image: radial-gradient(circle at 50% 51%, #002f5e, #030e1a);
+  }
+}

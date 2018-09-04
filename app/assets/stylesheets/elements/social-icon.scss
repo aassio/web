@@ -1,5 +1,7 @@
 .social-icon {
-  background: #fff;
-  padding: 5px;
   border-radius: 50%;
+  border: 10px solid transparent;
+  &:hover {
+    border-color: rgba(47, 138, 227, 0.19);
+  }
 }
