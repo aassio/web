@@ -4,6 +4,7 @@ html
     title = content_for?(:title) ? yield(:title) : 'aassio | real estate tokenization | crypto exchange'
     = csrf_meta_tags
     = csp_meta_tag
+    link rel="icon" href="/favicon.png"
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"
