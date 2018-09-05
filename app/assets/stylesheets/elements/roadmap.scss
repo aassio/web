@@ -1,0 +1,25 @@
+.roadmap-container {
+
+}
+
+.roadmap {
+  list-style: none;
+  padding: 20px 0;
+  position: relative;
+
+  li.year {
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    border: 2px solid $primary;
+    padding: 5px 15px;
+    border-radius: 25px;
+  }
+
+  li.left {}
+
+  li.right {}
+
+}
