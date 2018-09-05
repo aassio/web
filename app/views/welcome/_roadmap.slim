@@ -8,9 +8,11 @@
           span.text-white Road
           span.text-primary map
         hr.short.mb-4
-    .row
+    .row.pb-5
       .col.text-center
-        .roadmap-container
+        = retina_image_tag 'roadmap.png', class: 'img-fluid'
+
+        / .roadmap-container
           ul.roadmap
             li.year 2018
             li
