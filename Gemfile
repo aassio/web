@@ -32,6 +32,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'devise'
 gem 'activeadmin'
+gem 'rollbar'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
