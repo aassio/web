@@ -10,7 +10,7 @@ html
     link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"
 
     - if Rails.env.production?
-      script async src="https://www.googletagmanager.com/gtag/js?id=UA-123490664-1"
+      script src="https://www.googletagmanager.com/gtag/js?id=UA-123490664-1" async="async"
       javascript:
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
