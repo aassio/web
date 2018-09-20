@@ -26,19 +26,11 @@ html
         ul class="navbar-nav mr-auto"
           / li class="nav-item active" = link_to 'Public Sale', '#', class: 'nav-link'
           / li class="nav-item active" = link_to 'Team', '#', class: 'nav-link'
-          li class="nav-item"
-            a href='#description' class='nav-link' About
-          li class="nav-item"
-            a href='#community' class='nav-link' Community
-          li class="nav-item"
-            a href='#roadmap' class='nav-link' Roadmap
-          li class="nav-item"
-            a href='#team' class='nav-link' Team
-          li class="nav-item"
-            a href='#updates' class='nav-link' Subscribe
-          / li class="nav-item active" = link_to 'aassioX', '#', class: 'nav-link'
-          / li class="nav-item active" = link_to 'aassioHome', '#', class: 'nav-link'
-          / li class="nav-item active" = link_to 'aassioLife', '#', class: 'nav-link'
+          li class="nav-item" = link_to 'Welcome', root_path, class: 'nav-link'
+          li class="nav-item" = link_to 'Ecosystem', ecosystem_path, class: 'nav-link'
+          li class="nav-item" = link_to 'aassioX', exchange_path, class: 'nav-link'
+          li class="nav-item" = link_to 'aassioHome', home_path, class: 'nav-link'
+          li class="nav-item" = link_to 'aassioLife', life_path, class: 'nav-link'
         ul class="navbar-nav my-2 my-lg-0"
           li class="nav-item active" = link_to 'White Paper', 'https://drive.google.com/file/d/1Wq9mZpmcaO0voG3-J3yPKDMHmhJt8Dqq/view', class: 'nav-link btn btn-success btn-sm', target: '_blank'
         /   - if user_signed_in?
