@@ -14,7 +14,7 @@ set :ssh_options, {
 
 set :application, 'aassio_stage'
 set :deploy_to, "/home/aassio/#{fetch(:application)}"
-set :branch, 'develop'
+set :branch, 'master'
 set :rails_env, 'staging'
 
 set :default_environment, {
