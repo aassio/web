@@ -1,7 +1,10 @@
 .hero {
-  background: asset_url('hero-bg-min.jpg') #1B3988 50% 100% repeat-x;
-  background-size: auto;
+  background: $primary;
   color: $white;
+  &__welcome {
+    background: asset_url('hero-bg-min.jpg') $primary 50% 100% repeat-x;
+    background-size: auto;
+  }
 }
 
 .lead__hero {

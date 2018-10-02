@@ -2,6 +2,9 @@
   &__gray {
     background: $gray-100;
   }
+  &__darken_gray {
+    background: $gray-300;
+  }
   &__blue {
     background: $primary;
     color: $white;

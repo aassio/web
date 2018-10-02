@@ -1,0 +1,9 @@
+.underline {
+  border-bottom: 3px solid;
+  &__red {
+    border-color: $red;
+  }
+  &__green {
+    border-color: $green;
+  }
+}
