@@ -55,15 +55,20 @@ html
           li class="nav-item" = link_to 'aassioX', exchange_path, class: "nav-link #{current_page?(exchange_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassioHome', home_path, class: "nav-link #{current_page?(home_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassioLife', life_path, class: "nav-link #{current_page?(life_path) ? 'active' : '' }"
-        ul class="navbar-nav my-2 my-lg-0"
           li class="nav-item active" = link_to 'White Paper', 'https://drive.google.com/file/d/1Wq9mZpmcaO0voG3-J3yPKDMHmhJt8Dqq/view', class: 'nav-link btn btn-primary btn-sm', target: '_blank'
-        /   - if user_signed_in?
-        /     li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
-        /     li class="nav-item active" = link_to 'Account', '#', class: 'nav-link'
-        /     li class="nav-item active" = link_to 'Sign out', destroy_user_session, method: :delete, class: 'nav-link'
-        /   - else
-        /     li class="nav-item active" = link_to 'Sign up', new_user_registration_path, class: 'nav-link'
-        /     li class="nav-item active" = link_to 'Sign in', new1_user_session_path, class: 'nav-link'
+        ul class="navbar-nav my-2 my-lg-0"
+          - if user_signed_in?
+            / li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
+            li class="nav-item active" = link_to 'Account', account_path, class: 'nav-link'
+            li class="nav-item active" = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'
+          - else
+            li class="nav-item active" = link_to 'Sign up', new_user_registration_path, class: 'nav-link'
+            li class="nav-item active" = link_to 'Sign in', new_user_session_path, class: 'nav-link'
+
+    - if notice
+      .alert.alert-info.mb-0 = notice
+    - if alert
+      .alert.alert-danger.mb-0 = alert
 
     = yield
 
