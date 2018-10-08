@@ -1,11 +1,11 @@
 - content_for :title, 'aassioHOME'
 - content_for :description, 'aassioHOME is your passport into the world of the blockchain economy. The platform will help you to launch mini-ICO offerings on properties you own, tokenize your real estate and start selling your crypto assets.'
 
-.hero
+.hero.hero__home
   .container.py-5
     .row.py-5
       .col
-        .display-1 aassioHOME
+        .mb-4 = retina_image_tag 'products-logos/aassio-home.png', alt: 'aassioHome'
         p.lead__hero aassioHOME is your passport into the world of the blockchain economy. The platform will help you to launch mini-ICO offerings on properties you own, tokenize your real estate and start selling your crypto assets.
 
 .container.py-5
@@ -16,19 +16,16 @@
 .section.py-5
   .container
     .row
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.mb-5.text-center
+        div.mb-3 = retina_image_tag 'home-icons/token.png', alt: 'AAS is the main currency'
         h4.font-weight-bold.mb-3 AAS is the main currency
         p You can choose Bitcoin, Etherium or other crypto as a payment currency.
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.mb-5.text-center
+        div.mb-3 = retina_image_tag 'home-icons/exchange.png', alt: 'Our own crypto exchange'
         h4.font-weight-bold.mb-3 Our own crypto exchange
         p The platform is fully integrated with aassioX — you can manage your activities anytime from anywhere.
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.mb-5.text-center
+        div.mb-3 = retina_image_tag 'home-icons/everyone.png', alt: 'For everyone'
         h4.font-weight-bold.mb-3 For everyone
         p Private investors can participate in RET sales as well as institutional investors.
 
@@ -44,12 +41,14 @@
   .container
     .row
       .col-md-6
-        h3.font-weight-bold Real estate owners
-        p.lead Sell tokens and receive money faster.
-        p.lead Invest in other assets instead of waiting.
+        h3.underline.underline__green.font-weight-bold.pb-3.mb-3 Real estate owners
+        ul.success
+          li Sell tokens and receive money faster.
+          li Invest in other assets instead of waiting.
       .col-md-6
-        h3.font-weight-bold Investors
-        p.lead Become real estate co-owners even without huge initial investment.
-        p.lead Sell real estate tokens and earn on rising prices.
+        h3.underline.underline__green.font-weight-bold.pb-3.mb-3 Investors
+        ul.success
+          li Become real estate co-owners even without huge initial investment.
+          li Sell real estate tokens and earn on rising prices.
 
 

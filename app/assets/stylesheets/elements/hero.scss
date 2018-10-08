@@ -5,6 +5,22 @@
     background: asset_url('hero-bg-min.jpg') $primary 50% 100% repeat-x;
     background-size: auto;
   }
+  &__eco {
+    background: asset_url('products-logos/bg-eco-min.jpg') $primary 50% 50% repeat-x;
+    background-size: auto;
+  }
+  &__exchange {
+    background: asset_url('products-logos/bg-x-min.jpg') $primary 50% 50% repeat-x;
+    background-size: auto;
+  }
+  &__home {
+    background: asset_url('products-logos/bg-home-min.jpg') $primary 50% 50% repeat-x;
+    background-size: auto;
+  }
+  &__life {
+    background: asset_url('products-logos/bg-life-min.jpg') $primary 50% 50% repeat-x;
+    background-size: auto;
+  }
 }
 
 .lead__hero {

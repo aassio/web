@@ -1,11 +1,11 @@
 - content_for :title, 'aassioX'
 - content_for :description, 'aassioX our very own crypto exchange is the FIRST to be focused on real estate market tokenization. aassioX enables unlimited trading of AAS tokens and other cryptocurrencies.'
 
-.hero
+.hero.hero__exchange
   .container.py-5
     .row.py-5
       .col
-        .display-1 aassioX
+        .mb-4 = retina_image_tag 'products-logos/aassio-x.png', alt: 'aassioX'
         p.lead__hero aassioX our very own crypto exchange is the FIRST to be focused on real estate market tokenization. aassioX enables unlimited trading of AAS tokens and other cryptocurrencies.
 
 .container.py-5
@@ -18,19 +18,16 @@
 .section.py-5
   .container
     .row
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.text-center.mb-5
+        div.mb-3 = retina_image_tag 'exchange-icons/threshold.png', alt: 'Entry threshold is lower'
         h4.font-weight-bold.mb-3 Entry threshold is lower
         p Paying with AAS tokens earns you get a 20% discount
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.text-center.mb-5
+        div.mb-3 = retina_image_tag 'exchange-icons/realestate.png', alt: 'Real estate focus'
         h4.font-weight-bold.mb-3 Real estate focus
         p You can buy real estate crypto and trade it.
-      .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+      .col-md-4.text-center.mb-5
+        div.mb-3 = retina_image_tag 'exchange-icons/reinvestment.png', alt: 'Reinvestment'
         h4.font-weight-bold.mb-3 Reinvestment
         p We return the income from exchange into the platform and new features.
 
@@ -40,7 +37,7 @@
   .container
     .row.mb-5
       .col-md-6.d-flex.flex-column.justify-content-center
-        h2.font-weight-bold.mb-3 Buy
+        h3.font-weight-bold.mb-3 Buy
         p.lead Choose from real estate token options. Built your investment portfolio. Buy tokens favorably.
       .col-md-6
         img src="holder.js/100px300?text=Dashboard with charts"
@@ -48,23 +45,23 @@
       .col-md-6
         img src="holder.js/100px300?text=Token price dynamic"
       .col-md-6.d-flex.flex-column.justify-content-center
-        h2.font-weight-bold.mb-3 Control
+        h3.font-weight-bold.mb-3 Control
         p.lead Real-time price tracking. Access to the platform from any device or any location.
     .row.mb-5
       .col-md-6.d-flex.flex-column.justify-content-center
-        h2.font-weight-bold.mb-3 Multiply
+        h3.font-weight-bold.mb-3 Multiply
         p.lead Sell tokens as values grow. Become a real estate investor even with zero experience.
       .col-md-6
         img src="holder.js/100px300?text=Also something impressive"
 
 
-.section.py-5
+.section.section__blue.py-5
   .container
     .row
       .col.text-center
-        h2.mb-4 Join the aassioX exchange
+        h2.mb-4.font-weight-bold Join the aassioX exchange
         hr.short.mb-4
-        div = link_to 'Join now', '#', class: 'btn btn-primary btn-lg'
+        div = link_to 'Join now', new_user_registration_path, class: 'btn btn-outline-primary btn-lg px-5'
 
 
 
@@ -72,19 +69,17 @@
   .container
     .row.mb-4
       .col.text-center
-        h2.mb-4 Our powers
+        h2.mb-4.font-weight-bold Our powers
         hr.short
 
     .row
       .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+        div.mb-3 = retina_image_tag 'exchange-icons/safety.png', alt: 'Safety'
         h4.font-weight-bold.mb-3 Safety
       .col.text-center
         div.mb-3
-          img src="holder.js/100x100"
+          div.mb-3 = retina_image_tag 'exchange-icons/speed.png', alt: 'Speed'
         h4.font-weight-bold.mb-3 Speed
       .col.text-center
-        div.mb-3
-          img src="holder.js/100x100"
+        div.mb-3 = retina_image_tag 'exchange-icons/stability.png', alt: 'Stability'
         h4.font-weight-bold.mb-3 Stability

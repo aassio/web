@@ -1,0 +1,21 @@
+ul.failed {
+  padding-left: 0;
+  & > li {
+    background: asset_url('cross.png') no-repeat 0 0.1rem;
+    list-style-type: none;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+ul.success {
+  padding-left: 0;
+  & > li {
+    background: asset_url('check.png') no-repeat 0 0.1rem;
+    list-style-type: none;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+}
