@@ -2,7 +2,7 @@ role :app, %w{148.251.233.13}
 role :web, %w{148.251.233.13}
 role :db,  %w{148.251.233.13}
 
-set :stage, :production
+set :stage, :staging
 
 set :log_level,   :info
 
