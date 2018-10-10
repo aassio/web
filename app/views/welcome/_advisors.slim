@@ -1,32 +1,42 @@
+.section.section__gray
+  .container
 
-hr.my-4
+    a name='team'
 
-.row
-  .col
-    h5.text-center Advisors
-.row
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  .col
-    div = image_tag 'https://via.placeholder.com/200x200'
-    div Name
-    div Position
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    .row.pt-5
+      .col.text-center
+        h3.mb-4
+          ' Our
+          span.text-primary Advisors
+        hr.short.mb-4
+    .row.pb-5
 
+      .col.mb-5
+        .person.shadow-sm.rounded
+          div.person-avatar.mb-3 = image_tag 'team/gowrynath.jpg'
+          div.person-name Gowrynath Sivaganeshamoorthy
+          small Advisor Tech Architect
+
+      .col.mb-5
+        .person.shadow-sm.rounded
+          div.person-avatar.mb-3 = image_tag 'team/han.jpg'
+          div.person-name Han Liang
+          small Advisor Product & Data
+
+      .col.mb-5
+        .person.shadow-sm.rounded
+          div.person-avatar.mb-3 = image_tag 'team/francisco.jpg'
+          div.person-name Francisco Ibáñez
+          small Advisor IT process
+
+      .col.mb-5
+        .person.shadow-sm.rounded
+          div.person-avatar.mb-3 = image_tag 'team/andreyg.jpg'
+          div.person-name Andrew Gromenko
+          small Advisor Development
+
+      .col.mb-5
+        .person.shadow-sm.rounded
+          div.person-avatar.mb-3 = image_tag 'team/suvrajit.jpg'
+          div.person-name Suvrajit Saha
+          small Affiliate Project Mgm
