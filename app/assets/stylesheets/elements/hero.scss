@@ -23,7 +23,28 @@
   }
 }
 
-.lead__hero {
-  font-size: 32px;
-  font-weight: 300;
+
+
+
+@media (min-width: 576px) {
+  .lead__hero {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .lead__hero {
+    font-size: 28px;
+    font-weight: 300;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .lead__hero {
+    font-size: 32px;
+    font-weight: 300;
+  }
 }
