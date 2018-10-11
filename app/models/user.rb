@@ -19,4 +19,11 @@ class User < ApplicationRecord
     email
   end
 
+  # After email confirm give welcome bonus
+  def confirm
+    if super
+      self.transactions.create amount: 36, comment: 'Email verification bonus'
+    end
+  end
+
 end

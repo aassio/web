@@ -4,12 +4,13 @@
 .container.py-5
   .row
     .col
-      h1 Account
+      h1.font-weight-bold Account
 
       p Your current balance: #{number_to_currency current_user.actual_balance, unit: 'AAS', precision: 0, format: "%n %u"}
 
+
       - if current_user.transactions.exists?
-        h2 Transactions
+        h2.mt-5 Transactions
         table.table
           thead
             tr
@@ -19,7 +20,7 @@
           tbody
             - current_user.transactions.order(id: :desc).each do |transaction|
               tr
-                td = transaction.created_at
+                td = transaction.created_at.strftime('%B %d, %Y')
                 td = number_to_currency transaction.amount, unit: 'AAS', precision: 0, format: "%n %u"
                 td = transaction.comment
 
