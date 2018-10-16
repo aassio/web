@@ -1,3 +1,5 @@
-p Welcome #{@email}!
-p You can confirm your account email through the link below:
-p = link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
+p Hello, #{@resource.first_name}!
+p Thank you for joining aassio! Please confirm your email address for your account registration. To confirm your email, please click this link or cut and paste it into your browser:
+p = link_to confirmation_url(@resource, confirmation_token: @token), confirmation_url(@resource, confirmation_token: @token)
+p Welcome to the aassio ecosystem!
+p The aassio team

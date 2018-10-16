@@ -62,6 +62,7 @@ html
           - if user_signed_in?
             / li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
             li class="nav-item active" = link_to 'Account', account_path, class: 'nav-link'
+            li class="nav-item active" = link_to 'KYC', account_kyc_path, class: 'nav-link'
             li class="nav-item active" = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'
           - else
             li class="nav-item active" = link_to 'Sign up', new_user_registration_path, class: 'nav-link'
@@ -75,17 +76,19 @@ html
     = yield
 
 
-    footer.py-5
-      .container
-        .row.pb-3
-          .col.d-flex.justify-content-center
-            = link_to retina_image_tag('socials/footer/twitter.png'), 'https://twitter.com/aass_io', target: '_blank', class: 'social-icon'
-            = link_to retina_image_tag('socials/footer/medium.png'), 'https://medium.com/@aassio', target: '_blank', class: 'social-icon'
-            = link_to retina_image_tag('socials/footer/telegram.png'), 'https://t.me/aassionews', target: '_blank', class: 'social-icon'
-            = link_to retina_image_tag('socials/footer/facebook.png'), 'https://www.facebook.com/aassiorocks/', target: '_blank', class: 'social-icon'
-            = link_to retina_image_tag('socials/footer/linkedin.png'), 'https://www.linkedin.com/company/aassio/', target: '_blank', class: 'social-icon'
+    - unless @hide_footer
 
-        .row
-          .col.text-center
-            div
-              ' &copy; aassio.io, 2018
+      footer.py-5
+        .container
+          .row.pb-3
+            .col.d-flex.justify-content-center
+              = link_to retina_image_tag('socials/footer/twitter.png'), 'https://twitter.com/aass_io', target: '_blank', class: 'social-icon'
+              = link_to retina_image_tag('socials/footer/medium.png'), 'https://medium.com/@aassio', target: '_blank', class: 'social-icon'
+              = link_to retina_image_tag('socials/footer/telegram.png'), 'https://t.me/aassionews', target: '_blank', class: 'social-icon'
+              = link_to retina_image_tag('socials/footer/facebook.png'), 'https://www.facebook.com/aassiorocks/', target: '_blank', class: 'social-icon'
+              = link_to retina_image_tag('socials/footer/linkedin.png'), 'https://www.linkedin.com/company/aassio/', target: '_blank', class: 'social-icon'
+
+          .row
+            .col.text-center
+              div
+                ' &copy; aassio.io, 2018

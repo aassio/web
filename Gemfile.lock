@@ -63,6 +63,8 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    authy (2.7.4)
+      httpclient (>= 2.5.3.3)
     autoprefixer-rails (9.1.4)
       execjs
     bcrypt (3.1.12)
@@ -111,7 +113,14 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    countries (1.2.5)
+      currencies (~> 0.4.2)
+      i18n_data (~> 0.7.0)
+    country_select (2.5.2)
+      countries (~> 1.2.0)
+      sort_alphabetical (~> 1.0)
     crass (1.0.4)
+    currencies (0.4.2)
     devise (4.5.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -129,8 +138,10 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    httpclient (2.8.3)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.7.0)
     inherited_resources (1.9.0)
       actionpack (>= 4.2, < 5.3)
       has_scope (~> 0.6)
@@ -258,6 +269,8 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (~> 3.0)
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -281,6 +294,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.19)
       execjs (>= 0.3.0, < 3)
+    unicode_utils (1.4.0)
     unicorn (4.9.0)
       kgio (~> 2.6)
       rack
@@ -303,6 +317,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  authy
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.1.3)
   byebug
@@ -314,6 +329,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  country_select
   devise
   jbuilder (~> 2.5)
   jquery-rails

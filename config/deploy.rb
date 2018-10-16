@@ -26,7 +26,7 @@ set :keep_releases, 10
 append :linked_files, 'config/unicorn.rb', 'config/master.key', 'config/database.yml'
 
 # Default value for linked_dirs is []
-append :linked_dirs,  'log', 'pids', 'sockets', 'vendor/bundle'
+append :linked_dirs,  'log', 'pids', 'sockets', 'vendor/bundle', 'storage'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }

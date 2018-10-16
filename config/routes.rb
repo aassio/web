@@ -22,6 +22,17 @@ Rails.application.routes.draw do
   get 'life', to: 'welcome#life'
 
   get 'account', to: 'account#index'
+  get 'account/kyc'
+  patch 'account/add_phone'
+  delete 'account/delete_phone'
+  post 'account/check_code'
+  post 'account/upload_passport_front_page'
+  post 'account/upload_passport_back_page'
+  post 'account/upload_passport_selfie'
+  post 'account/upload_utility_bill'
+  patch 'account/request_interview'
+
+  get 'sale', to: 'sale#index'
 
   resources :email_subscriptions, only: [:create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
