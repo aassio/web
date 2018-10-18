@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :verification_events
   has_many :verification_smses, class_name: 'VerificationSms'
   has_many :verification_sms_tryouts
+  has_many :orders
 
   scope :for_level_2, -> { where(verification_level: 1).where('balance > 36').where('mobile_phone_confirmed_at IS NOT NULL') }
   scope :for_level_3, -> { where(verification_level: 2).where(has_passport_front_page: true).where(has_passport_back_page: true).where(has_passport_selfie: true) }
@@ -87,6 +88,10 @@ class User < ApplicationRecord
     when 4 then 1500
     when 5 then 5000
     end
+  end
+
+  def max_purchase_in_aas
+    (max_purchase_in_usd / 0.1).to_i
   end
 
 

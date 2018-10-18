@@ -1,6 +1,7 @@
 class AccountController < BackofficeDefaultController
 
   def index
+    @order = current_user.orders.build amount: current_user.max_purchase_in_aas
   end
 
   def kyc

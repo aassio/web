@@ -8,6 +8,34 @@
 
       p Your current balance: #{number_to_currency current_user.actual_balance, unit: 'AAS', precision: 0, format: "%n %u"}
 
+      h2.mt-5 Purchase AAS
+
+      = simple_form_for @order  do |f|
+        = f.input :amount, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of AAS to purchase. Max #{current_user.max_purchase_in_aas} AAS (#{current_user.max_purchase_in_usd} USD)."
+        = f.submit 'Create order', class: 'btn btn-success'
+
+      - if current_user.orders.exists?
+        h2.mt-5 Orders
+        table.table
+          thead
+            tr
+              th ID
+              th Date
+              th Amount
+              th Purchase price
+              th Status
+          tbody
+            - current_user.orders.order(id: :desc).each do |order|
+              tr
+                td = order.id
+                td = order.created_at.strftime('%B %d, %Y')
+                td = number_to_currency order.amount, unit: 'AAS', precision: 0, format: "%n %u"
+                td
+                  - if order.processed?
+                    = number_to_currency order.purchase_price, unit: order.purchase_currency, precision: 0, format: "%n %u"
+                  - else
+                    span –
+                td = order.aasm_state
 
       - if current_user.transactions.exists?
         h2.mt-5 Transactions
