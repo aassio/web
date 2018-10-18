@@ -1,18 +1,5 @@
-// Video
-.row.my-5
-  .col#video-container
-    iframe width="560" height="315" src="https://www.youtube.com/embed/3t_O1mPO50s?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"
-javascript:
-    var $allVideos = $("iframe[src^='https://www.youtube.com']"),
-        $fluidEl = $("#video-container");
-    $allVideos.each(function () {
-        $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-    });
-
-    $(window).resize(function () {
-        var newWidth = $fluidEl.width();
-        $allVideos.each(function () {
-            var $el = $(this);
-            $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-        });
-    }).resize();
+.container.mb-5
+  .row.justify-content-center
+    .col-lg-10.col-sm data-aos="fade-up" data-aos-delay="400"
+      .embed-responsive.embed-responsive-16by9.r-video
+        iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9HQrupjJzx8?autoplay=0&loop=1&rel=0&showinfo=0&playlist=9HQrupjJzx8" frameborder="0" allowfullscreen="allowfullscreen"
