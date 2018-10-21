@@ -18,12 +18,16 @@
       ol
         li Decide how much ETH do you want to spend.
         li Create an order with amount of ETH you want to spend.
-        li Send amount of ETH to the wallet XXX.
+        li Send amount of ETH to the wallet 0x73eC545B37c254E02907e79c3A326F0A526C5b2F
         li Send an email to rf@aass.io with info: your wallet ID, amount of ETH you've sent and order ID.
         li Wait a bit...
         li And it's done.
 
-    .col-md-6
+
+    .col-md-3
+      p = image_tag 'presale-qr.png', class: 'img-fluid'
+
+    .col-md-3
 
       = simple_form_for @order  do |f|
         = f.input :purchase_price, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) < #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
