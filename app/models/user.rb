@@ -90,6 +90,10 @@ class User < ApplicationRecord
     end
   end
 
+  def max_purchase_in_eth
+    max_purchase_in_usd / 200.0
+  end
+
   def max_purchase_in_aas
     (max_purchase_in_usd / 0.1).to_i
   end

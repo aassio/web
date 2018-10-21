@@ -9,7 +9,7 @@
   .row.mb-5
     .col-md-6
       h2.font-weight-bold.text-success.mb-3 Level 1
-      p Max purchase: $250
+      p Max purchase: 1.25 ETH
     .col-md-6
       table.table
         tbody
@@ -24,7 +24,7 @@
   .row.mb-5
     .col-md-6
       h2 class="font-weight-bold mb-3 #{'text-success' if current_user.verification_level >= 2}" Level 2
-      p Max purchase: $500
+      p Max purchase: 2.5 ETH
       - if current_user.ready_for_level?(2) && current_user.verification_level == 1
         p.badge.badge-info Awaiting verification from control team
 
@@ -65,7 +65,7 @@
   .row.mb-5
     .col-md-6
       h2 class="font-weight-bold mb-3 #{'text-success' if current_user.verification_level >= 3}" Level 3
-      p Max purchase: $1000
+      p Max purchase: 5 ETH
       - if current_user.ready_for_level?(3) && current_user.verification_level == 2
         p.badge.badge-info Awaiting verification from control team
     .col-md-6
@@ -109,7 +109,7 @@
   .row.mb-5
     .col-md-6
       h2 class="font-weight-bold mb-3 #{'text-success' if current_user.verification_level >= 4}" Level 4
-      p Max purchase: $1500
+      p Max purchase: 7.5 ETH
       - if current_user.ready_for_level?(4) && current_user.verification_level == 3
         p.badge.badge-info Awaiting verification from control team
     .col-md-6
@@ -130,7 +130,7 @@
   .row.mb-5
     .col-md-6
       h2 class="font-weight-bold mb-3 #{'text-success' if current_user.verification_level == 5}" Level 5
-      p Max purchase: $5000
+      p Max purchase: 25 ETH
       - if current_user.ready_for_level?(5) && current_user.verification_level == 4
         p.badge.badge-info Awaiting verification from control team
     .col-md-6

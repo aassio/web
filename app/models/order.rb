@@ -2,7 +2,9 @@ class Order < ApplicationRecord
 
   belongs_to :user
   validates :user_id, presence: true
-  validates :amount, presence: true, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 50000 }
+  # validates :amount, presence: true, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 50000 }
+  validates :purchase_currency, presence: :true
+  validates :purchase_price, presence: true, numericality: { greater_than: 0, less_than_or_equal_to: 25 }
 
   include AASM
 

@@ -61,7 +61,7 @@ html
         ul class="navbar-nav my-2 my-lg-0"
           - if user_signed_in?
             / li class="nav-item active" = link_to 'Backoffice', '#', class: 'nav-link'
-            li class="nav-item active" = link_to 'Account', account_path, class: 'nav-link'
+            li class="nav-item active" = link_to 'My AAS', account_path, class: 'nav-link'
             li class="nav-item active" = link_to 'KYC', account_kyc_path, class: 'nav-link'
             li class="nav-item active" = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'
           - else

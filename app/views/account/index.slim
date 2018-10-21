@@ -10,10 +10,28 @@
 
       h2.mt-5 Purchase AAS
 
+  .row
+    .col-md-6
+
+      p How to purchase AAS:
+
+      ol
+        li Decide how much ETH do you want to spend.
+        li Create an order with amount of ETH you want to spend.
+        li Send amount of ETH to the wallet XXX.
+        li Send an email to rf@aass.io with info: your wallet ID, amount of ETH you've sent and order ID.
+        li Wait a bit...
+        li And it's done.
+
+    .col-md-6
+
       = simple_form_for @order  do |f|
-        = f.input :amount, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of AAS to purchase. Max #{current_user.max_purchase_in_aas} AAS (#{current_user.max_purchase_in_usd} USD)."
+        = f.input :purchase_price, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) < #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
         = f.submit 'Create order', class: 'btn btn-success'
 
+
+  .row
+    .col
       - if current_user.orders.exists?
         h2.mt-5 Orders
         table.table
@@ -30,11 +48,7 @@
                 td = order.id
                 td = order.created_at.strftime('%B %d, %Y')
                 td = number_to_currency order.amount, unit: 'AAS', precision: 0, format: "%n %u"
-                td
-                  - if order.processed?
-                    = number_to_currency order.purchase_price, unit: order.purchase_currency, precision: 0, format: "%n %u"
-                  - else
-                    span –
+                td = number_to_currency order.purchase_price, unit: order.purchase_currency, precision: 2, format: "%n %u"
                 td = order.aasm_state
 
       - if current_user.transactions.exists?
