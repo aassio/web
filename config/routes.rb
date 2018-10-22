@@ -32,8 +32,6 @@ Rails.application.routes.draw do
   post 'account/upload_utility_bill'
   patch 'account/request_interview'
 
-  get 'sale', to: 'sale#index'
-
   resources :email_subscriptions, only: [:create]
 
   resources :orders, only: [:create] do
