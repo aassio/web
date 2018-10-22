@@ -40,10 +40,13 @@ class AccountController < BackofficeDefaultController
 
   def upload_passport_front_page
     if params[:user].present? && params[:user][:passport_front_page].present? && current_user.verification_level == 2
-      if current_user.passport_front_page.attach params[:user][:passport_front_page]
+      current_user.passport_front_page.attach params[:user][:passport_front_page]
+      if current_user.passport_front_page.attached?
         current_user.update! has_passport_front_page: true
+        redirect_to account_kyc_path, notice: 'File uploaded'
+      else
+        redirect_to account_kyc_path, alert: 'File was not uploaded'
       end
-      redirect_to account_kyc_path, notice: 'File uploaded'
     else
       redirect_to account_kyc_path
     end
@@ -51,10 +54,13 @@ class AccountController < BackofficeDefaultController
 
   def upload_passport_back_page
     if params[:user].present? && params[:user][:passport_back_page].present? && current_user.verification_level == 2
-      if current_user.passport_back_page.attach params[:user][:passport_back_page]
+      current_user.passport_back_page.attach params[:user][:passport_back_page]
+      if current_user.passport_back_page.attached?
         current_user.update! has_passport_back_page: true
+        redirect_to account_kyc_path, notice: 'File uploaded'
+      else
+        redirect_to account_kyc_path, alert: 'File was not uploaded'
       end
-      redirect_to account_kyc_path, notice: 'File uploaded'
     else
       redirect_to account_kyc_path
     end
@@ -62,10 +68,13 @@ class AccountController < BackofficeDefaultController
 
   def upload_passport_selfie
     if params[:user].present? && params[:user][:passport_selfie].present? && current_user.verification_level == 2
-      if current_user.passport_selfie.attach params[:user][:passport_selfie]
+      current_user.passport_selfie.attach params[:user][:passport_selfie]
+      if current_user.passport_selfie.attached?
         current_user.update! has_passport_selfie: true
+        redirect_to account_kyc_path, notice: 'File uploaded'
+      else
+        redirect_to account_kyc_path, alert: 'File was not uploaded'
       end
-      redirect_to account_kyc_path, notice: 'File uploaded'
     else
       redirect_to account_kyc_path
     end
@@ -73,10 +82,13 @@ class AccountController < BackofficeDefaultController
 
   def upload_utility_bill
     if params[:user].present? && params[:user][:utility_bill].present? && current_user.verification_level == 3
-      if current_user.utility_bill.attach params[:user][:utility_bill]
+      current_user.utility_bill.attach params[:user][:utility_bill]
+      if current_user.utility_bill.attached?
         current_user.update! has_utility_bill: true
+        redirect_to account_kyc_path, notice: 'File uploaded'
+      else
+        redirect_to account_kyc_path, alert: 'File was not uploaded'
       end
-      redirect_to account_kyc_path, notice: 'File uploaded'
     else
       redirect_to account_kyc_path
     end

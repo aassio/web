@@ -61,7 +61,7 @@
                     p = link_to 'Or set new phone', account_delete_phone_path, method: :delete
 
       - else
-        p You must be on verification level 1 or more to apply this level
+        p You must be on verification level 1 to apply this level
 
 
 
@@ -111,7 +111,7 @@
               - else
                 td.text-right.text-success Done
       - else
-        p You must be on verification level 2 or more to apply this level
+        p You must be on verification level 2 to apply this level
 
 
   .row.mb-5 class="#{'text-muted' if current_user.verification_level < 3} "
@@ -136,7 +136,7 @@
               - else
                 td.text-right.text-success Done
       - else
-        p You must be on verification level 3 or more to apply this level
+        p You must be on verification level 3 to apply this level
 
 
 
@@ -158,7 +158,7 @@
                 - else
                   td.text-right = link_to 'Send interview request', account_request_interview_path, method: :patch, class: 'btn btn-primary btn-sm'
       - else
-        p You must be on verification level 4 or more to apply this level
+        p You must be on verification level 4 to apply this level
 
 
 
