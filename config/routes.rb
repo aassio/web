@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'home', to: 'welcome#home'
   get 'ecosystem', to: 'welcome#ecosystem'
   get 'life', to: 'welcome#life'
+  get 'sale', to: 'welcome#sale'
 
   get 'account', to: 'account#index'
   get 'account/kyc'

@@ -4,3 +4,7 @@ hr.short {
   height: 2px;
   border: 0;
 }
+
+hr.gray {
+  border-top: 1px solid $gray-500;
+}

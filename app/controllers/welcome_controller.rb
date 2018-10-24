@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
   def exchange; end
   def life; end
   def ecosystem; end
+  def sale; end
 
 
 end

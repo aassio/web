@@ -53,6 +53,7 @@ html
           / li class="nav-item active" = link_to 'Public Sale', '#', class: 'nav-link'
           / li class="nav-item active" = link_to 'Team', '#', class: 'nav-link'
           li class="nav-item" = link_to 'welcome', root_path, class: "nav-link #{current_page?(root_path) ? 'active' : '' }"
+          li class="nav-item" = link_to 'token details', sale_path, class: "nav-link #{current_page?(sale_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'ecosystem', ecosystem_path, class: "nav-link #{current_page?(ecosystem_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassio<span class="font-italic">X</span>'.html_safe, exchange_path, class: "nav-link #{current_page?(exchange_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassio<span class="font-italic">Home</span>'.html_safe, home_path, class: "nav-link #{current_page?(home_path) ? 'active' : '' }"
