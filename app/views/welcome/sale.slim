@@ -5,116 +5,93 @@
   .container
     .row
       .col
-        h1.text-white.text-center.font-weight-bold.my-5 Token Sale Details
+        h1.text-white.text-center.font-weight-bold.my-5 Token Details
 
 
 .container
   .row
-    .col-md-6.mb-5
-      .card.shadow-sm
-        .card-body
-          table.table.table-sm.table-borderless
-            tr
-              th Starting date (pre-sale)
-              td.text-right 2018-11-01
-            tr
-              th End date (pre-sale)
-              td.text-right 2019-02-14
-            tr
-              th Starting date (main-sale)
-              td.text-right 2019-03-01
-            tr
-              th End date (main-sale)
-              td.text-right 2019-04-30
-            tr
-              th Token name
-              td.text-right aassio token
-            tr
-              th Token Ticker
-              td.text-right AAS
-            tr
-              th Token Type
-              td.text-right Utility
-            tr
-              th Token Standard
-              td.text-right ERC20
-            tr
-              th Token price. Pre-sale USD
-              td.text-right $0.10
-            tr
-              th Token price. Main sale  USD
-              td.text-right $0.10
-            tr
-              th ETH:USD (fix)
-              td.text-right $200.00
-            tr
-              th ETH:AAS (fix)
-              td.text-right 2 000
-            tr
-              th Minimum purchase
-              td.text-right 1 ETH
-          hr.gray
-          table.table.table-sm.table-borderless
-            tr
-              th Total token supply
-              td.text-right 1 000 000 000
-            tr
-              th Total token for sale
-              td.text-right 500 000 000
-            tr
-              th Token for sale 1st round ICO
-              td.text-right 10 000 000
-          hr.gray
-          table.table.table-sm.table-borderless
-            tr
-              th Soft cap (ETH)
-              td.text-right 30 000
-            tr
-              th Hard cap (ETH)
-              td.text-right 50 000
-            tr
-              th Payment Method
-              td.text-right ETH only
+    .col-lg-8.offset-lg-2.py-5
+      table.table.table-sm.table-borderless.table-striped.mb-3
+        tr
+          th Starting date (pre-sale)
+          td.text-right 2018-11-01
+        tr
+          th End date (pre-sale)
+          td.text-right 2019-02-14
+        tr
+          th Starting date (main-sale)
+          td.text-right 2019-03-01
+        tr
+          th End date (main-sale)
+          td.text-right 2019-04-30
+        tr
+          th Token name
+          td.text-right aassio token
+        tr
+          th Token Ticker
+          td.text-right AAS
+        tr
+          th Token Type
+          td.text-right Utility
+        tr
+          th Token Standard
+          td.text-right ERC20
+        tr
+          th Token price. Pre-sale USD
+          td.text-right $0.10
+        tr
+          th Token price. Main sale  USD
+          td.text-right $0.10
+        tr
+          th ETH:USD (fix)
+          td.text-right $200.00
+        tr
+          th ETH:AAS (fix)
+          td.text-right 2 000
+        tr
+          th Minimum purchase
+          td.text-right 1 ETH
+
+        table.table.table-sm.table-borderless.table-striped.mb-3
+          tr
+            th Total token supply
+            td.text-right 1 000 000 000
+          tr
+            th Total token for sale
+            td.text-right 500 000 000
+          tr
+            th Token for sale 1st round ICO
+            td.text-right 10 000 000
+
+        table.table.table-sm.table-borderless.table-striped.mb-3
+          tr
+            th Soft cap (ETH)
+            td.text-right 30 000
+          tr
+            th Hard cap (ETH)
+            td.text-right 50 000
+          tr
+            th Payment Method
+            td.text-right ETH only
+
+.section.section__gray
+  .container
+    .row
+      .col-lg-8.offset-lg-2.pt-5
+        h3.mb-4.text-center.font-weight-bold Token Distribution
+        hr.short.mb-4
+
+        div.text-center = retina_image_tag 'token-distribution.png', alt: 'Token Distribution', class: 'img-fluid'
 
 
-    .col-md-6.mb-5
+.section.section__darken_gray
+  .container
+    .row
+      .col-lg-8.offset-lg-2.py-5
+        h3.mb-4.text-center.font-weight-bold Hard Cap Scenario
+        hr.short.mb-4
 
-      h3.text-center.font-weight-bold Tokens Distribution
-
-      .my-5.text-center = image_tag 'token-distribution-pie.svg', class: 'img-fluid', style: 'max-width: 350px'
-
-      table.table.table-borderless.table-sm.token-distribution-table style="max-width: 350px; margin: auto"
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__blue.mr-3
-            span aassioX ICO
-          td.text-right.font-weight-bold 10%
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__green.mr-3
-            span aassioHome ICO
-          td.text-right.font-weight-bold 40%
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__orange.mr-3
-            span Company Reserve
-          td.text-right.font-weight-bold 35%
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__red.mr-3
-            span Team Pool
-          td.text-right.font-weight-bold 10%
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__purple.mr-3
-            span A&A Pool
-          td.text-right.font-weight-bold 4%
-        tr
-          td.d-flex
-            span.circle-bullet.circle-bullet__black.mr-3
-            Bounty Bounty Pool
-          td.text-right.font-weight-bold 1%
-
+        div.text-center = retina_image_tag 'hard-cap.png', alt: 'Hard Cap Scenario', class: 'img-fluid'
 
 
 .section.section__blue.text-white
@@ -127,3 +104,13 @@
         div.token-price-rectangle.py-2.px-4.mb-3.font-weight-bold 1 : 2000
         p which means a fixed rate of ETH:USD at $200.
         p You will get more AAS if the ETH price goes higher by the End Date of the pre-sale! Luckily, you won't suffer if the ETH price goes lower, as the same amount of AAS will be secured for you! You win in either case.
+
+
+
+.container
+  .row
+    .col-lg-8.offset-lg-2.py-5
+      h3.mb-4.text-center.font-weight-bold Pre-sale Bonus
+      hr.short.mb-4
+
+      div.text-center = retina_image_tag 'presale-bonus.png', alt: 'Pre-sale bonus', class: 'img-fluid'

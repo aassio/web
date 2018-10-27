@@ -1,34 +1,4 @@
-.circle-bullet {
-  height: 32px;
-  width: 32px;
-  display: block;
-  border-radius: 50%;
-  &__blue {
-    background: $blue;
-  }
-  &__green {
-    background: $green;
-  }
-  &__orange {
-    background: $orange;
-  }
-  &__red {
-    background: $red;
-  }
-  &__purple {
-    background: $purple;
-  }
-  &__black {
-    background: $black;
-  }
-}
 
-
-.token-distribution-table {
-  td {
-    font-size: 22px;
-  }
-}
 
 
 .token-price-rectangle {
