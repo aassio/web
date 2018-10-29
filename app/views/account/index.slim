@@ -30,7 +30,7 @@
     .col-md-3
 
       = simple_form_for @order  do |f|
-        = f.input :purchase_price, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) < #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
+        = f.input :purchase_price, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) <= #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
         = f.submit 'Create order', class: 'btn btn-success'
 
 
