@@ -19,7 +19,6 @@
         li Decide how much ETH do you want to spend.
         li Create an order with amount of ETH you want to spend.
         li Send amount of ETH to the wallet 0x73eC545B37c254E02907e79c3A326F0A526C5b2F
-        li Send an email to rf@aass.io with info: your wallet ID, amount of ETH you've sent and order ID.
         li Wait a bit...
         li And it's done.
 
@@ -30,7 +29,8 @@
     .col-md-3
 
       = simple_form_for @order  do |f|
-        = f.input :purchase_price, as: :numeric, wrapper_html: {class: 'mr-3'}, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) <= #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
+        = f.input :purchase_price, as: :numeric, label: "Amount of ETH to spend. Max #{current_user.max_purchase_in_eth} ETH", input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) <= #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (@order.purchase_price * 2000).to_i } AAS tokens", hint_html: { id: 'order-hint' }
+        = f.input :source_wallet, label: "Your wallet ID", hint: 'We will identify your transfer by this wallet ID'
         = f.submit 'Create order', class: 'btn btn-success'
 
 
@@ -45,6 +45,7 @@
               th Date
               th Amount
               th Purchase price
+              th Your wallet ID
               th Status
           tbody
             - current_user.orders.order(id: :desc).each do |order|
@@ -53,6 +54,7 @@
                 td = order.created_at.strftime('%B %d, %Y')
                 td = number_to_currency order.amount, unit: 'AAS', precision: 0, format: "%n %u"
                 td = number_to_currency order.purchase_price, unit: order.purchase_currency, precision: 2, format: "%n %u"
+                td = order.source_wallet
                 td = order.aasm_state
 
       - if current_user.transactions.exists?
