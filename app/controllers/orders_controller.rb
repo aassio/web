@@ -6,7 +6,7 @@ class OrdersController < BackofficeDefaultController
     if @order.purchase_price.is_a?(Numeric) && @order.purchase_price > current_user.max_purchase_in_eth
       @order.purchase_price = current_user.max_purchase_in_eth
     end
-    if @order.save!
+    if @order.save
       redirect_to account_path, notice: 'Order created, follow instructions'
     else
       redirect_to account_path, alert: 'Order wasn`t created'
