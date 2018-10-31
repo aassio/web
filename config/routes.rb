@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'ecosystem', to: 'welcome#ecosystem'
   get 'life', to: 'welcome#life'
   get 'sale', to: 'welcome#sale'
+  get 'kyc', to: 'welcome#kyc'
 
   get 'account', to: 'account#index'
   get 'account/kyc'

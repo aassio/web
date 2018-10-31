@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   def life; end
   def ecosystem; end
   def sale; end
+  def kyc; end
 
 
 end
