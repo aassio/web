@@ -15,7 +15,7 @@ ActiveAdmin.register User do
 
   permit_params :first_name, :last_name, :email, :mobile_phone_country_code, :mobile_phone
 
-  form title: 'A custom title' do |f|
+  form title: '' do |f|
     inputs 'Details' do
       input :first_name
       input :last_name

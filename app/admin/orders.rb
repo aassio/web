@@ -1,6 +1,15 @@
 ActiveAdmin.register Order do
 
-  permit_params :amount, :user_id, :comment
+  permit_params :user_id, :comment, :purchase_price, :amount, :source_wallet
+
+  form title: '' do |f|
+    inputs 'Details' do
+      input :user
+      input :purchase_price
+      input :source_wallet
+    end
+    actions
+  end
 
   action_item 'Process', only: :show do
     if order.draft?

@@ -4,8 +4,9 @@ class Order < ApplicationRecord
   validates :user_id, presence: true
   # validates :amount, presence: true, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 50000 }
   validates :purchase_currency, presence: :true
-  validates :purchase_price, presence: true, numericality: { greater_than: 0, less_than_or_equal_to: 25 }
+  validates :purchase_price, presence: true, numericality: { greater_than_or_equal: 1.0, less_than_or_equal_to: 25 }
   validates :source_wallet, presence: true, length: { maximum: 255 }
+  validates_acceptance_of :tos_agreement, allow_nil: false, accept: true, on: :create
 
   include AASM
 
