@@ -37,13 +37,6 @@
         table.table
           tbody
             tr
-              td Make at least one purchase
-              td.text-right
-                - if current_user.transactions.count > 1
-                  p.text-success Done
-                - else
-                  = link_to 'Purchase AAS tokens', account_path
-            tr
               td Verify mobile phone
               td.text-right
                 - unless current_user.mobile_phone.present?

@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :verification_sms_tryouts
   has_many :orders
 
-  scope :for_level_2, -> { where(verification_level: 1).where('balance > 36').where('mobile_phone_confirmed_at IS NOT NULL') }
+  scope :for_level_2, -> { where(verification_level: 1).where('mobile_phone_confirmed_at IS NOT NULL') }
   scope :for_level_3, -> { where(verification_level: 2).where(has_passport_front_page: true).where(has_passport_back_page: true).where(has_passport_selfie: true) }
   scope :for_level_4, -> { where(verification_level: 3).where(has_utility_bill: true) }
   scope :for_level_5, -> { where(verification_level: 4).where(sent_interview_request: true) }
@@ -68,7 +68,7 @@ class User < ApplicationRecord
   def ready_for_level?(level)
     case level
     when 2 then
-      return transactions.count > 1 && mobile_phone_confirmed? && verification_level == 1
+      return mobile_phone_confirmed? && verification_level == 1
     when 3 then
       return verification_level == 2 && has_passport_front_page? && has_passport_back_page? && has_passport_selfie?
     when 4 then
