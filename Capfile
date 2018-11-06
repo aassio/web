@@ -7,7 +7,7 @@ require 'capistrano/deploy'
 # require 'capistrano/sidekiq'
 
 require 'capistrano/rvm'
-# require 'capistrano/sidekiq'
+require 'capistrano/sidekiq'
 require 'capistrano/bundler'
 require 'capistrano/rails/migrations'
 require 'capistrano/rails/assets'

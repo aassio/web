@@ -37,6 +37,8 @@ gem 'unicorn', '~> 4.9.0'
 gem 'authy'
 gem 'country_select'
 gem 'aasm'
+gem 'sidekiq'
+gem 'httparty'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
