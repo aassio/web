@@ -38,7 +38,6 @@ gem 'authy'
 gem 'country_select'
 gem 'aasm'
 gem 'sidekiq'
-gem 'httparty'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -69,7 +68,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano3-unicorn'
   gem 'capistrano-sidekiq'
-
+  gem 'letter_opener'
 end
 
 group :test do

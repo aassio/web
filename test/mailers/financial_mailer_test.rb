@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NotifyAboutOrdersJobTest < ActiveJob::TestCase
+class FinancialMailerTest < ActionMailer::TestCase
   # test "the truth" do
   #   assert true
   # end

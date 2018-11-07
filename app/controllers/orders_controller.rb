@@ -7,7 +7,7 @@ class OrdersController < BackofficeDefaultController
       @order.purchase_price = current_user.max_purchase_in_eth
     end
     if @order.save
-      NotifyAboutOrdersJob.perform_later @order
+      FinancialMailer.new_order(@order).deliver_now
       redirect_to account_path, notice: 'Order created, follow instructions'
     else
       redirect_to account_path, alert: ("Order wasn`t created: " + @order.errors.map { |k,v| "#{k.to_s} #{v}" }.join(', ').to_s)
