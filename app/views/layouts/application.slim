@@ -57,7 +57,8 @@ html
           li class="nav-item" = link_to 'ecosystem', ecosystem_path, class: "nav-link #{current_page?(ecosystem_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassio<span class="font-italic">X</span>'.html_safe, exchange_path, class: "nav-link #{current_page?(exchange_path) ? 'active' : '' }"
           li class="nav-item" = link_to 'aassio<span class="font-italic">Home</span>'.html_safe, home_path, class: "nav-link #{current_page?(home_path) ? 'active' : '' }"
-          li class="nav-item mr-3" = link_to 'aassio<span class="font-italic">Life</span>'.html_safe, life_path, class: "nav-link #{current_page?(life_path) ? 'active' : '' }"
+          li class="nav-item" = link_to 'aassio<span class="font-italic">Life</span>'.html_safe, life_path, class: "nav-link #{current_page?(life_path) ? 'active' : '' }"
+          li class="nav-item mr-3" = link_to 'Blog', 'https://medium.com/@aassio', class: 'nav-link' ,target: '_blank'
           li class="nav-item active" = link_to 'White Paper', 'https://drive.google.com/file/d/1Wq9mZpmcaO0voG3-J3yPKDMHmhJt8Dqq/view', class: 'nav-link btn btn-primary btn-sm', target: '_blank'
         ul class="navbar-nav my-2 my-lg-0"
           - if user_signed_in?
