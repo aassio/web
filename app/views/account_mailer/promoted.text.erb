@@ -1,0 +1,9 @@
+Hello, <%= @user.first_name %>!
+Your profile promoted to level <%= @level %>.
+Now you can spend up to <%= number_to_currency(@user.max_purchase_in_eth, unit: 'ETH', precision: 2, format: "%n %u") %> in AAS token pre-sale.
+<% if @level < 5 %>
+Visit KYC page to find out how to get to the next level: <%= account_kyc_url %>
+<% end %>
+
+Have a nice day!
+aassio team.

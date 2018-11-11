@@ -102,6 +102,7 @@ ActiveAdmin.register User do
     if user.ready_for_level?(2)
       user.verification_events.create! admin_user_id: current_admin_user.id, what_happened: "Admin #{current_admin_user.email} set KYC level 2 in admin panel"
       user.update! verification_level: 2
+      AccountMailer.promoted(user, 2).deliver_now
     end
     redirect_to admin_user_path(user), notice: 'User promoted to level 2'
   end
@@ -117,6 +118,7 @@ ActiveAdmin.register User do
     if user.ready_for_level?(3)
       user.verification_events.create! admin_user_id: current_admin_user.id, what_happened: "Admin #{current_admin_user.email} set KYC level 3 in admin panel"
       user.update! verification_level: 3
+      AccountMailer.promoted(user, 3).deliver_now
     end
     redirect_to admin_user_path(user), notice: 'User promoted to level 3'
   end
@@ -132,6 +134,7 @@ ActiveAdmin.register User do
     if user.ready_for_level?(4)
       user.verification_events.create! admin_user_id: current_admin_user.id, what_happened: "Admin #{current_admin_user.email} set KYC level 4 in admin panel"
       user.update! verification_level: 4
+      AccountMailer.promoted(user, 4).deliver_now
     end
     redirect_to admin_user_path(user), notice: 'User promoted to level 4'
   end
@@ -148,6 +151,7 @@ ActiveAdmin.register User do
     if user.ready_for_level?(5)
       user.verification_events.create! admin_user_id: current_admin_user.id, what_happened: "Admin #{current_admin_user.email} set KYC level 5 in admin panel"
       user.update! verification_level: 5
+      AccountMailer.promoted(user, 5).deliver_now
     end
     redirect_to admin_user_path(user), notice: 'User promoted to level 5'
   end
