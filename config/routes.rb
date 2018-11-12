@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'life', to: 'welcome#life'
   get 'sale', to: 'welcome#sale'
   get 'kyc', to: 'welcome#kyc'
+  get 'faq', to: 'welcome#faq'
 
   get 'account', to: 'account#index'
   get 'account/kyc'
