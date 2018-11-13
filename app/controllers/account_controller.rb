@@ -23,7 +23,7 @@ class AccountController < BackofficeDefaultController
 
   def check_code
     tryout = current_user.verification_sms_tryouts.new params[:verification_sms_tryout].permit(:code)
-    if tryout.save!
+    if tryout.save
       response = Authy::PhoneVerification.check verification_code: tryout.code, country_code: current_user.mobile_phone_country_code, phone_number: current_user.mobile_phone
       if response.ok?
         tryout.update result: true
