@@ -11,7 +11,7 @@
           = f.input :email, required: true, autofocus: true, input_html: {autocomplete: "email"}
           = f.input :password, required: true, hint: "#{@minimum_password_length} characters minimum", input_html: {autocomplete: "new-password"}
           = f.input :password_confirmation, required: true, input_html: {autocomplete: "new-password"}
-          = f.input :tos_agreement, label: 'I agree with Privacy Policy and Terms'
+          = f.input :tos_agreement, label: "I agree with Privacy <a href='https://docs.google.com/document/d/1kniod_lOtHqKeRL5FLnKE-8glK3VOW4ZiFSewyz1c3E/' target='_blank'>Policy and Terms</a>".html_safe
         .form-actions
           = f.button :submit, "Sign up", class: 'btn btn-primary'
       = render "devise/shared/links"

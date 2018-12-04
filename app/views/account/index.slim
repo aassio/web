@@ -31,7 +31,7 @@
       = simple_form_for @order  do |f|
         = f.input :purchase_price, as: :numeric, label: "Amount of ETH to spend. Min 1&nbsp;ETH. Max #{number_to_currency(current_user.max_purchase_in_eth, unit: 'ETH', precision: 2, format: "%n %u")}".html_safe, input_html: { onchange: "if(parseFloat(this.value) > 0 && parseFloat(this.value) <= #{current_user.max_purchase_in_eth}) { $('#order-hint').load('/orders/calculate_aas?sum=' + this.value) }" }, hint: "#{ (PreSaleTokenPrice.new.aas_tokens_for_eth(Date.current, @order.purchase_price)).to_i } AAS tokens", hint_html: { id: 'order-hint' }
         = f.input :source_wallet, label: "Your wallet ID", hint: 'We will identify your transfer by this wallet ID'
-        = f.input :tos_agreement, label: 'I agree with Purchase Policy'
+        = f.input :tos_agreement, label: "I agree with <a href='https://docs.google.com/document/d/1kniod_lOtHqKeRL5FLnKE-8glK3VOW4ZiFSewyz1c3E/' target='_blank'>Policy and Terms</a>".html_safe
         = f.submit 'Create order', class: 'btn btn-success'
       p.mt-2 Learn how to #{link_to 'increase max purchase', account_kyc_path}.
 
