@@ -95,7 +95,7 @@ class User < ApplicationRecord
   end
 
   def max_purchase_in_aas
-    (max_purchase_in_usd / 0.1).to_i
+    (max_purchase_in_usd / 0.1).round(2)
   end
 
 

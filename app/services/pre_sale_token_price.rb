@@ -97,7 +97,7 @@ class PreSaleTokenPrice
   # @return AAS
   def aas_tokens_for_eth(date, eth)
     price_row = price_on(date)
-    (eth * ETH_TO_USD / ( price_row[:price] * (1 - price_row[:discount]) )).ceil
+    (eth * ETH_TO_USD / ( price_row[:price] * (1 - price_row[:discount]) )).round(2)
   end
 
 end

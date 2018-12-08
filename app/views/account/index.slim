@@ -6,7 +6,7 @@
     .col
       h1.font-weight-bold = current_user.full_name
 
-      p Your current balance: #{number_to_currency current_user.actual_balance, unit: 'AAS', precision: 0, format: "%n %u"}
+      p Your current balance: #{number_to_currency current_user.actual_balance, unit: 'AAS', precision: 2, format: "%n %u"}
 
       h2.mt-5 Purchase AAS
 
@@ -54,7 +54,7 @@
               tr
                 td = order.id
                 td = order.created_at.strftime('%B %d, %Y')
-                td = number_to_currency order.amount, unit: 'AAS', precision: 0, format: "%n %u"
+                td = number_to_currency order.amount, unit: 'AAS', precision: 2, format: "%n %u"
                 td = number_to_currency order.purchase_price, unit: order.purchase_currency, precision: 2, format: "%n %u"
                 td = order.source_wallet
                 td = order.aasm_state
