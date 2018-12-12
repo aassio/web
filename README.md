@@ -15,7 +15,7 @@ Below there is our internal information of how it works. We written down it just
 
 1. User signs up
 2. User receives email with confirmation link
-3. User confirms email and receives bonus 36 AAS
+3. User confirms email 
 4. Verification event saved to DB
 5. User signs in
 
@@ -25,9 +25,8 @@ Below there is our internal information of how it works. We written down it just
 2. User receives SMS code: verification SMS created
 3. User enters SMS code: verification tryout created
 4. If SMS code is correct, mobile phone becomes confirmed
-5. User makes additional purchase
-6. Admin sees "Ready for level 2" scope
-7. Admin sets level 2 to a user
+5. Admin sees "Ready for level 2" scope
+6. Admin sets level 2 to a user
 
 ## Level 3 verification process
 

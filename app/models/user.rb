@@ -59,7 +59,6 @@ class User < ApplicationRecord
   # After email confirm give welcome bonus
   def confirm
     if super
-      self.transactions.create amount: 36, comment: 'Email verification bonus'
       self.verification_events.create what_happened: 'User confirmed email'
       self.update verification_level: 1
     end
