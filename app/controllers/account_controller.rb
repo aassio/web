@@ -2,9 +2,11 @@ class AccountController < BackofficeDefaultController
 
   def index
     @order = current_user.orders.build purchase_price: current_user.max_purchase_in_eth
+    redirect_to root_path
   end
 
   def kyc
+    redirect_to root_path
   end
 
   def add_phone
